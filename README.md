@@ -10,7 +10,7 @@ Instead of using an external LLM API, this implementation uses:
 - rule-based answer-level aggregation
 
 ## Motivation
-RAG enhances factual grounding by accessing supportive evidence prior to generating answers. Nevertheless, despite retrieved context, answers can still have hallucinated or unsubstantiated claims. Response-level assessment is usually too rough as it might obscure a partial hallucination within an otherwise accurate response.
+RAG enhances factual grounding by accessing supportive evidence prior to generating answers. Nevertheless, despite retrieved context, answers can still have hallucinated or unsubstantiated claims. Response-level assessment is usually too coarse as it might obscure a partial hallucination within an otherwise accurate response.
 
 This project solves that problem by applying the concept of claim-level verification where:
 1. an answer is divided into smaller claims,
@@ -37,7 +37,7 @@ Rag_project/
 |-- hotpotqa_for_rag.py
 |-- rag_hallucination_local.py
 |-- graphs.py
-|-- hotpot_dev_distractor_v1 (1).json
+|-- hotpot_dev_distractor_v1.json
 │
 |-- prepared_data/
 │   |-- questions.jsonl
