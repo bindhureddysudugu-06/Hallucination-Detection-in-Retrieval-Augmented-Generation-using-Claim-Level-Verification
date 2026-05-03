@@ -9,8 +9,6 @@ Instead of using an external LLM API, this implementation uses:
 - local similarity-based claim verification.
 - rule-based answer-level aggregation
 
----
-
 ## Motivation
 RAG enhances factual grounding by accessing supportive evidence prior to generating answers. Nevertheless, despite retrieved context, answers can still have hallucinated or unsubstantiated claims. Response-level assessment is usually too rough as it might obscure a partial hallucination within an otherwise accurate response.
 
@@ -20,14 +18,10 @@ This project solves that problem by applying the concept of claim-level verifica
 3. claims are given the labels, Supported, Partially Supported or Unsupported,
 4. labels are pooled together into an answer-level assessment of hallucinations.
 
----
-
 ## Project Objective
 The goal of the current project is to construct and test a claim-level hallucination detection pipeline to do retrieval-augmented question answering and how retrieval depth and similarity thresholds influence unsupported claim rates.
 ### Primary Research Question
 Does claim-level verification give more informative and reliable analysis of hallucinations in retrieval-augmented question answering than response-level evaluation?
-
----
 
 ## Dataset
 This project utilizes a subset of HotpotQA, a benchmark of multi-hop question answering. HotpotQA would be appropriate in this work due to the fact that, in most questions, a combination of evidence based on multiple supporting documents is needed and hence is applicable in the study of evidence grounding and unsupported claims.
@@ -36,7 +30,6 @@ In the case of the experiments implemented:
 - **100 questions** were used
 - **992 documents** were processed
 - Chunks After the preprocessing, 1023 chunks were created.
----
 
 ## Project Structure
 Rag_project/
